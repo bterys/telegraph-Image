@@ -220,6 +220,7 @@
                         for (let item of result) {
                             item.url = item.referer + item.url
                         }
+                        console.log(result)
                         this.tableData = result;
                         
                     })
@@ -304,7 +305,6 @@
         },
 
         mounted() {
-
             fetch("/manage/check", requestOptions)
                 .then(response => response.json())
                 .then(result => {
@@ -343,9 +343,10 @@
                 })
                 .then(response => response.json())
                 .then(result => {
-                    // console.log(result);
+                    for (let item of result) {
+                        item.url = item.referer + item.url
+                    }
                     this.tableData = result;
-                    // console.log(result);
 
                 })
                 .catch(error => {
