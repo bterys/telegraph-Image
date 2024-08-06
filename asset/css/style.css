@@ -1567,3 +1567,6 @@ body {
 .copyAllButton{
     margin-bottom: 5px;
 }
+.form-control {
+    padding: .175rem .75rem;
+}
