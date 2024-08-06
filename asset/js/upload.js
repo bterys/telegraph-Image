@@ -245,6 +245,7 @@ $smfile.on('fileuploaded', function (event, data, previewId, index) {
 $smfile.on('fileclear', function (event) {
     $smfile.fileinput("enablePreview");
 });
+
 $smfile.on('filecleared', function (event) {
     if ($("#showurl").is(":visible")) {
         uploaded_files = [];
@@ -266,7 +267,7 @@ $.prototype.fileinput.Constructor.prototype["disablePreview"] = function () {
 };
 
 $.prototype.fileinput.Constructor.prototype["enablePreview"] = function () {
-    this.showPreview = true;
+    this.showPreview = false;
 };
 
 $.prototype.fileinput.Constructor.prototype["setFinalUrl"] = function (func) {
