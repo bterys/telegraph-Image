@@ -201,7 +201,7 @@ var uploaded_files = [];
 function render_uploaded() {
     $('#imagedetail').html("");
     $('#htmlcode').html("");
-    $('#bbcode').html("");
+    // $('#bbcode').html("");
     $('#markdown').html("");
     $("#showurl").hide();
     if (uploaded_files.length == 0)
@@ -224,7 +224,7 @@ function render_uploaded() {
         var RAW = resp.data.thumb == null ? PhRAW + resp.data.url : PhRAW + resp.data.thumb.url;
         $('#imagedetail').append(formatHtml({ url: url, code: url, wp: wpurl, raw: RAW }));
         $('#htmlcode').append(formatHtml({ url: url, code: '<img src="' + url + '" />', wp: '<img src="' + wpurl + '" />', raw: '<img src="' + RAW + '" />' }));
-        $('#bbcode').append(formatHtml({ url: url, code: '[img]' + url + '[/img]', wp: '[img]' + wpurl + '[/img]' , raw: '[img]' + RAW + '[/img]' }));
+        // $('#bbcode').append(formatHtml({ url: url, code: '[img]' + url + '[/img]', wp: '[img]' + wpurl + '[/img]' , raw: '[img]' + RAW + '[/img]' }));
         $('#markdown').append(formatHtml({ url: url, code: '![' + name + '](' + url + ')', wp: '![' + name + '](' + wpurl + ')', raw: '![' + name + '](' + RAW + ')' }));
     });
 }
