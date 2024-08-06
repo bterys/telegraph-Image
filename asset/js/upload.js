@@ -25,9 +25,9 @@ $smfile.fileinput({
     autoOrientImage: true,
     fileActionSettings: {
         showRemove: true,
-        showUpload: true,
-        showZoom: true,
-        showDrag: true,
+        showUpload: false,
+        showZoom: false,
+        showDrag: false,
     },
     browseClass: "btn btn-success",
     // msgPlaceholder: "选择文件",
@@ -38,7 +38,7 @@ $smfile.fileinput({
     uploadClass: "btn btn-info",
     // uploadLabel: "上传",
     dropZoneTitle: "拖拽文件到这里<br>或将屏幕截图复制并粘贴到此处<br>支持多文件同时上传…",
-    //showPreview: false
+    showPreview: false
 })
 
 function hasHtmlTags(string) {
